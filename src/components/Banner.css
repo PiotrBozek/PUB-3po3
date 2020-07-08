@@ -1,0 +1,23 @@
+.banner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+.baner-name {
+        font-size: 5em;
+        justify-content: center;
+        color: rgb(153, 151, 151);
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        transform: scale(1.4) rotate(358deg);
+        text-shadow: 2px 2px 3px #d6d5d4;
+        letter-spacing: 0.05em;
+       
+}
+
+.baner-adress {
+        /* display: flex;
+        align-self: flex-end; */
+        top: 600px !important;
+}

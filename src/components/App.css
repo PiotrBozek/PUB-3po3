@@ -1,0 +1,36 @@
+.container {
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    border: hotpink 1px solid;
+
+}
+.headers {
+    width: 80%;
+    height: 10vh;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid rgb(29, 201, 95);
+}
+
+input {
+    border: rgb(61, 71, 214) 2px solid;
+}
+.szukarka {
+    display: block;
+    width: 40%;
+    /* border: 1px solid red; */
+}
+.tymczasowy {
+    display: block;
+    width: 20%;
+    border: sandybrown 1px solid;
+    background-color: skyblue;
+}
+.navi {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1vh auto;
+    border: seagreen 1px solid;
+}

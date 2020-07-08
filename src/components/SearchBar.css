@@ -1,0 +1,27 @@
+.search-bar {
+    width: 30%;
+    margin: 1vh auto;
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+}
+.box-search {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.label-name {
+ margin-bottom: 0;
+ font-family: 'Architects Daughter', cursive;
+}
+input {
+    margin-top: 0;
+}
+.resetX {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-end;
+    margin-left: .5vw;
+    color: blue;
+    font-family: 'Architects Daughter', cursive;
+}

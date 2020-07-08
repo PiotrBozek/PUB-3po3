@@ -1,0 +1,18 @@
+.buttonHover {
+    
+    font-size: large;
+    margin: 0 1vw !important;
+}
+.buttonHover:hover {
+    transform: scale(1.05);
+}
+
+.test {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1em;
+
+
+
+}

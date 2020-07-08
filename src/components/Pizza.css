@@ -1,0 +1,67 @@
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 3px 3px 4px 0px rgba(182, 180, 180, 0.75);
+    width: 25%;
+    margin: 1% 1% ;
+    transition-duration: 1s;
+    background-color: white;
+}
+
+.cards:hover{
+    transform: scale(1.02, 1.02);
+    /* -webkit-transform: scale(1,5);
+    -moz-transform: scale(1,5); */
+    z-index: 0;
+    cursor: pointer;
+}
+/* .cards:active {
+    transform: scale(1.3);
+} */
+.image {
+    display:block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+.name-pizza {    
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+}
+.ingredient {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+}
+.name {
+   
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    
+}
+.price {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+}
+.price p {
+    text-align: center;
+}
+.data {
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  
+}

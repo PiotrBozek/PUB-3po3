@@ -1,0 +1,254 @@
+{
+     "Pizzas": [{
+        "key": 1,
+        "name": "margerita",
+        "ingredient": ["sos", "ser" ],
+        "price": [14 , 18, 25],
+        "vege": true
+      },
+      {
+        "key": 2,
+        "name": "salami",
+        "ingredient": ["sos", "ser", "salami" ],
+        "price": [15 , 19, 25],
+        "vege": false
+      },
+      {
+        "key": 3,
+        "name": "turyn",
+        "ingredient": ["sos", "ser", "szynka", "papryka" ],
+        "price": [16 , 20, 27],
+        "vege": false
+      },
+      {
+        "key": 4,
+        "name": "hawajska",
+        "ingredient": ["sos", "ser", "szynka", "ananas" ],
+        "price": [16 , 20, 27],
+        "vege": false
+      },
+      {
+        "key": 5,
+        "name": "tiwoli",
+        "ingredient": ["sos", "ser", "szynka", "pieczarki" ],
+        "price": [16 , 20, 27],
+        "vege": false
+      },
+      {
+        "key": 6,
+        "name": "sienna",
+        "ingredient": ["sos", "ser", "pieczarki" ,"salami", "kukurydza" ],
+        "price": [19 , 24, 33],
+        "vege": false
+      },
+      {
+        "key": 7,
+        "name": "sanmarino",
+        "ingredient": ["sos", "ser", "cebula", "tuńczyk", "oliwki" ],
+        "price": [19 , 24, 33],
+        "vege": false
+      },
+      {
+        "key": 8,
+        "name": "salermo",
+        "ingredient": ["sos", "ser", "szpinak", "parmezan" ],
+        "price": [16 , 20, 27],
+        "vege": true
+      },
+      {
+        "key": 9,
+        "name": "fiorentina",
+        "ingredient": ["sos", "ser", "pieczarki", "szpinak", "jajko", "czosnek" ],
+        "price": [20 , 25, 33],
+        "vege": true
+      },
+      {
+        "key": 10,
+        "name": "wenecja",
+        "ingredient": ["sos", "ser", "szynka", "brokuły", "pomidor" ],
+        "price": [19 , 24, 33],
+        "vege": false
+      },
+      {
+        "key": 11,
+        "name": "napoli",
+        "ingredient": ["sos", "ser", "szynka", "pieczarki", "salami", "oregano" ],
+        "price": [20 , 23, 30],
+        "vege": false
+      },
+      {
+        "key": 12,
+        "name": "roma",
+        "ingredient": ["sos", "ser", "szynka", "pomidor", "papryka", "cebula" ],
+        "price": [20 , 24, 33],
+        "vege": false
+      },
+      {
+        "key": 13,
+        "name": "florencja",
+        "ingredient": ["sos", "ser", "salami", "papryka", "cebula", "oliwki" ],
+        "price": [20 , 24, 33],
+        "vege": false
+      },
+      {
+        "key": 14,
+        "name": "nowa",
+        "ingredient": ["sos", "ser", "szynka" ,"kapary", "karczochy" ],
+        "price": [20 , 23, 30],
+        "vege": false
+      },
+      {   
+        "key": 15,
+        "name": "gyros",
+        "ingredient": ["sos", "mozarella", "pomidor", "gyros drobiowy", "sałata lodowa", "czerwona cebula", "zielony ogórek" ],
+        "price": [24 , 28, 40],
+        "vege": false
+      },
+      {
+        "key": 16,
+        "name": "4 sery",
+        "ingredient": ["sos", "ser", "feta", "mozarella", "parmezan", "ser pleśniowy z zielonym pieprzem" ],
+        "price": [21 , 27, 38],
+        "vege": true
+      },
+      {
+        "key": 17,
+        "name": "wegetariana",
+        "ingredient": ["sos", "ser", "cebula", "oliwki", "brokuły", "papryka", "pomidor", "kukurydza" ],
+        "price": [21 , 27, 38],
+        "vege": true
+      },
+      {
+        "key": 18,
+        "name": "diabolo (ostra)",
+        "ingredient": ["sos", "ser", "cebula", "papryka", "salami", "peperoni", "czosnek" ],
+        "price": [20 , 27, 38],
+        "vege": false
+      },
+      {
+        "key": 19,
+        "name": "wezuwiusz",
+        "ingredient": ["sos", "ser", "cebula", "salami", "peperoni", "tabasco" ],
+        "price": [18 , 25, 36],
+        "vege": false
+      },
+      {
+        "key": 20,
+        "name": "frutti di mare",
+        "ingredient": ["sos", "ser", "krewetki", "małże", "czosnek" ],
+        "price": [19 , 26, 36],
+        "vege": false
+      },
+      {
+        "key": 21,
+        "name": "rukoletta",
+        "ingredient": ["ser biały wędzony", "czarnuszka" ,"rukola" ],
+        "price": [18 , 25, 36],
+        "vege": true
+      },
+      {
+        "key": 22,
+        "name": "3 kolory",
+        "ingredient": ["sos", "ser", "pieczarki", "brokuły", "szynka", "salami", "cebula", "papryka" ],
+        "price": [22 , 27, 38],
+        "vege": false
+      },
+      {
+        "key": 23,
+        "name": "idealna",
+        "ingredient": ["dwie dowolne w jednej" ],
+        "price": [21 , 27, 38],
+        "vege": false
+      },
+      {
+        "key": 24,
+        "name": "szefa",
+        "ingredient": ["sos", "ser", "szynka", "salami","cebula", "papryka", "czosnek" ],
+        "price": [21 , 27, 38],
+        "vege": false
+      },
+      {
+        "key": 25,
+        "name": "milano",
+        "ingredient": ["sos", "ser", "kabanos", "salami", "pomidor", "czosnek" ],
+        "price": [19 , 27, 38],
+        "vege": false
+      },
+      {
+        "key": 26,
+        "name": "werona",
+        "ingredient": ["sos", "ser", "bekon", "jajko", "parmezan", "zielony pieprz" ],
+        "price": [20 , 27, 38],
+        "vege": false
+      },
+      {
+        "key": 27,
+        "name": "lacio",
+        "ingredient": ["sos", "ser", "kurczak", "kukurydza", "słodka peperoni" ],
+        "price": [20 , 27, 38],
+        "vege": false
+      },
+      {
+        "key": 28,
+        "name": "swoja",
+        "ingredient": ["sos", "ser", "4 dodatki na życzenie" ],
+        "price": [20 , 27, 38],
+        "vege": false
+      }
+    ],
+    "Salad": [{
+      "key": 1,
+      "name": "śródziemnomorska",
+      "ingredient": ["sos", "sałata lodowa", "ser feta", "ogórek", "pomidor", "oliwki", "czerwona cebula"],
+      "price": [18],
+      "vege": true
+    },
+    {
+      "key": 2,
+      "name": "z tuńczykiem",
+      "ingredient": ["sos", "sałata lodowa", "tuńczyk", "pomidor", "oliwki", "czerwona cebula", "papryka"],
+      "price": [18],
+      "vege": false
+    },
+    { 
+      "key": 3,
+      "name": "z kurczakiem",
+      "ingredient": ["sos", "sałata lodowa", "czerwona cebula", "kukurydza", "papryka", "korniszon"],
+      "price": [18],
+      "vege": false
+    },
+    {
+      "key": 4,
+      "name": "wielowarzywna",
+      "ingredient": ["sos", "sałata lodowa", "cebula", "pomidor", "papryka", "ogórek", "ser mozarella"],
+      "price": [18],
+      "vege": true
+    },
+    { 
+      "key": 5,
+      "name": "mix",
+      "ingredient": ["sałata lodowa", "kukurydza", "5 wybranych składników"],
+      "price": [19],
+      "vege": true
+    },
+    {
+      "key": 6,
+      "name": "caprese",
+      "ingredient": ["pokrojone plastry sera mozarella przekładane plastrami pomidora", "zioła", "oliwa z oliwek"],
+      "price": [18],
+      "vege": true
+    },
+    {
+      "key": 7,
+      "name": "koszyczek chlebków",
+      "ingredient": ["chlebek z ciasta drożdzowego, okraszony serem mozarellą"],
+      "price": [18],
+      "vege": true
+    }
+  ],
+
+    "Ingredients": ["sos", "ser", "szynka", "salami", "papryka", "ananas", "pieczarki", 
+      "kukurydza", "tuńczyk", "oliwki", "cebula", "jalapenio", "szpinak","parmezan", 
+      "jajko", "czosnek", "oregano", "pomidor", "kapary", "karczochy", "mozarella", 
+      "gyros drobiowy", "ogórek","sałata lodowa"]
+  }
