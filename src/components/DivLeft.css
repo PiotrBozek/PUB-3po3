@@ -6,12 +6,16 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Lato', sans-serif;
     padding: 0;
 }
 .adress {
     font-size: 1rem;
     text-shadow: 0 0 0 white;
+    font-family: 'Lato', sans-serif;
+  }
+.nr-phone {
+    font-family: 'Lato', sans-serif;
   }
 .icon {
     height: 18px;
