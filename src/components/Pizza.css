@@ -6,27 +6,31 @@
     box-shadow: 3px 3px 4px 0px rgba(182, 180, 180, 0.75);
     width: 25%;
     margin: 1% 1% ;
-    transition-duration: 1s;
-    background-color: white;
+    /* transition-duration: 1s; */
+    background-color: rgb(250, 250, 248);
 }
 
 .cards:hover{
-    transform: scale(1.02, 1.02);
-    /* -webkit-transform: scale(1,5);
-    -moz-transform: scale(1,5); */
+    transform: scale(1.02, 1.02); 
+    -webkit-transform: scale(1.02, 1.02);
+    -moz-transform: scale(1.02, 1.02); 
     z-index: 0;
     cursor: pointer;
 }
-/* .cards:active {
+
+.cards:active {
     transform: scale(1.3);
-} */
+}
+
 .image {
-    display:block;
-    max-width: 100%;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
     object-fit: cover;
     object-position: 50% 50%;
 }
+
 .name-pizza {    
     font-size: 20px;
     font-weight: 800;
@@ -40,11 +44,9 @@
     padding-left: 1vw;
 }
 .name {
-   
     display: flex;
     flex-direction: column;
     width: 70%;
-    
 }
 .price {
     width: 30%;
@@ -65,3 +67,35 @@
     align-items: center;
   
 }
+@media (max-width: 1191px) {
+    .name-pizza {
+        font-size: 16px;
+    }
+    .ingredient {
+        font-size: 12px;
+    }
+    .price {
+        font-size: 12px;
+    }
+}
+@media (max-width: 990px) {
+    .name-pizza {
+        font-size: 14px;
+    }
+    .ingredient {
+        font-size: 10px;
+    }
+    .price {
+        font-size: 10px;
+    }
+    .cards {
+        width: 33%;
+    }
+}
+@media (max-width: 700px) {
+    .cards {
+        width: 50%;
+    }
+}
+
+

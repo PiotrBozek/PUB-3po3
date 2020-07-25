@@ -3,14 +3,15 @@ import React from 'react';
 
 
    export default (choice) =>{
-         
+         console.log(choice.choice);
     return (
-        <div className="test">
-            <button onClick={choice.onFormSubmitPizza} className="ui primary basic button buttonHover">
-                Pizza
+        
+        <div className="buttons2">
+            <button onClick={choice.onFormSubmitPizza} className= {choice.choice==="pizza"?"active":"buttonHover"}>
+                PIZZA
             </button>
-            <button onClick={choice.onFormSubmitSalad} className="ui primary basic button buttonHover">
-                Sałatka
+            <button onClick={choice.onFormSubmitSalad} className= {choice.choice==="salad"?"active":"buttonHover"}>
+                SAŁATKA
             </button>
             
             

@@ -3,10 +3,26 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
+    align-items: baseline;
+    align-self: flex-end;
+    width: 9vw;
+    font-family: 'Lato', sans-serif;
 }
 label {
     margin-left: 0.3vw;
 }
+
+@media (max-width: 1191px) {
+    .checkbox-div     {
+        width: 9vw;
+        }
+        .vegetarian {
+            font-size: .7em;
+        }
+}
+@media (max-width: 875px) {
+    .checkbox-div {
+        width: 100%;
+        margin-top: 1vw;
+    }
+    }

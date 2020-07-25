@@ -136,7 +136,7 @@
         "key": 20,
         "name": "frutti di mare",
         "ingredient": ["sos", "ser", "krewetki", "małże", "czosnek" ],
-        "price": [19 , 26, 36],
+        "price": [22 , 29, 40],
         "vege": false
       },
       {

@@ -1,18 +1,51 @@
 .buttonHover {
-    
-    font-size: large;
-    margin: 0 1vw !important;
+    margin-right: .5vw;
+    width: 70px;
+    height: 30px;
+    background-color: white;
+    border: 1px rgb(104, 160, 243) solid;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
 }
 .buttonHover:hover {
     transform: scale(1.05);
 }
 
-.test {
+.buttons2 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    margin-top: 1em;
-
-
-
+    justify-content: flex-end;
+    align-items: baseline;
+    align-self: flex-end;
+    margin-bottom: .5em;
 }
+.active {
+    margin-right: .5vw;
+    width: 70px;
+    height: 30px;
+    background-color: white;
+    border: 1px rgb(104, 160, 243) solid !important;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    background-color: #D6EBFF;
+    font-size: 12px;
+    font-weight: 700;
+}
+@media (max-width: 990px) {
+    .buttonHover {
+        width: 60px;
+        height: 25px;
+        font-size: 10px;
+    }
+    .active {
+        width: 60px;
+        height: 25px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 875px) {
+    .buttons2 {
+        margin: 1vw auto;
+    }
+    }

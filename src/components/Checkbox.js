@@ -12,7 +12,7 @@ export default (props) => {
                         checked={props.vegebox}
                         onChange={props.change} 
                 />
-                <label htmlFor="vegetaian"> 
+                <label className="vegetarian"> 
                         dla wegetarian 
                 </label>
             </div>

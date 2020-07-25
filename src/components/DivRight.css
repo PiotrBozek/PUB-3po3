@@ -1,0 +1,21 @@
+.div-right p{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 10px;
+    color: gray;
+    letter-spacing: 2px;
+    font-size: 2em;
+}
+@media (max-width: 985px) {
+    .div-right p {
+        letter-spacing: 1px;
+        font-size: 1.5em;
+    }
+}
+@media (max-width: 670px) {
+    .div-right p {
+        letter-spacing: 1px;
+        font-size: 1em;
+    }
+}
