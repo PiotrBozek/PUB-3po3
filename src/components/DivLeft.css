@@ -6,10 +6,8 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
-    /* text-shadow: 2px 2px 2px #555555; */
     font-family: 'Architects Daughter', cursive;
     padding: 0;
-    border: red 1 px solid;
 }
 .adress {
     font-size: 1rem;
@@ -22,16 +20,30 @@
 }
 @media (max-width: 700px) {
     .adress {
-            font-size: .5rem;
+            font-size: 12px;
             margin-left: 2px;
     }
     .icon {
         height: 15px;
     }
-    .nr-phone {
+    /* .nr-phone {
         font-size: .5em;
-    }
+    } */
     .div-left {
         margin: 0 auto;
+    }
+}
+@media (max-width: 700px) {
+    .div-left {
+        flex-direction: column;
+        border: hotpink 1px solid;
+    }
+    .nr-phone {
+        justify-self: center;
+        border: rgb(44, 31, 226) 1px solid;
+    }
+    .adress {
+        justify-self: center;
+        border: rgb(47, 226, 31) 1px solid;
     }
 }
