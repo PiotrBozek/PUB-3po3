@@ -11,7 +11,6 @@ export default ({pizzas}) => {
                 price = {pizza.price}
         />    
             ))
-
 return (
 
  <div className ="items-list">

@@ -2,8 +2,6 @@ import "./Pizza.css";
 import React from 'react';
 
 export default (key) => {
-    
-    // console.log(key.name);
 
     const skladniki = key.ingredient.toString().replace(/,/g, ", ");
     const picture = `../pics/pizzas/${key.name}.jpg`;

@@ -31,6 +31,7 @@ class App extends React.Component {
             ingredients: API_DATA.Ingredients
         })    
     }
+
     onTermSubmit = (term, choise) => {
         const filterP = this.state.pizzas;
         const FilterPizza = filterP.filter(name => name.ingredient.includes(term.toLowerCase()));

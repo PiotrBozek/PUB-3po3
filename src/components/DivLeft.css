@@ -32,7 +32,7 @@
 }
 @media (max-width: 700px) {
     .div-left {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .nr-phone {
         margin: 0 auto;
