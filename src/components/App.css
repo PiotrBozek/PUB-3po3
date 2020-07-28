@@ -26,14 +26,14 @@ footer {
         margin: .5vw auto 0 auto;
         font-family: 'Lato', sans-serif;
         border-top: gray solid 1px;
-        width: 70%;
+        width: 80%;
         text-align: center;
         padding-top: 3px;
 }
 
 @media (max-width: 990px) {
 .search {
-        width: 70%;
+        width: 80%;
 }
 }
 @media (max-width: 875px) {

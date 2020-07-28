@@ -7,6 +7,7 @@ export default (key) => {
     const picture = `../pics/pizzas/${key.name}.jpg`;
     const alt = `pizza ${key.name}`;
     const price = key.price.join(", ");
+    // const test = key.price.map(() => <p>{key.price} zł</p>)
 return (
     
 <div className="cards">
@@ -25,7 +26,7 @@ return (
             </div>
             <div className="price">
                 <p>cena</p>
-                
+                {/* {test} */}
                     {price}
             </div>
         </div>
