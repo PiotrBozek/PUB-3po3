@@ -6,8 +6,9 @@ export default (key) => {
     const skladniki = key.ingredient.toString().replace(/,/g, ", ");
     const picture = `../pics/pizzas/${key.name}.jpg`;
     const alt = `pizza ${key.name}`;
-    const price = key.price.join(", ");
+    // const price = key.price.join(", ");
     // const test = key.price.map(() => <p>{key.price} zł</p>)
+const price = key.price.map((one) => <p>{one}<span>zł</span></p>);
 return (
     
 <div className="cards">
@@ -25,8 +26,7 @@ return (
                     </div>
             </div>
             <div className="price">
-                <p>cena</p>
-                {/* {test} */}
+                    {/* <p>cena</p> */}
                     {price}
             </div>
         </div>

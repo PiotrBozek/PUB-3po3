@@ -51,12 +51,17 @@
 }
 .price {
     width: 30%;
-    display: block;
- 
-    
+    display: block;   
 }
 .price p {
     text-align: center;
+    text-align: right;
+    padding-right: 1.2vw;
+    margin: 0;
+}
+.price p span {
+    font-size: 10px;
+    
 }
 .data {
     text-align: center;
@@ -98,14 +103,8 @@
     .name-pizza {
         font-size: 14px;
     }
-    .price {
-      
-        border: hotpink 1px solid;
-    }
-    .price p {
-        color:white;
-        
-    }
+
+
 }
 
 
