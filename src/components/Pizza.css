@@ -6,7 +6,7 @@
     box-shadow: 3px 3px 4px 0px rgba(182, 180, 180, 0.75);
     width: 25%;
     margin: 1% 1% ;
-    /* transition-duration: 1s; */
+    transition-duration: 1s;
     background-color: rgb(250, 250, 248);
 }
 
@@ -35,12 +35,12 @@
     font-size: 20px;
     font-weight: 800;
     padding-top: 1vh;
-    padding-bottom: 1vh;
+    /* padding-bottom: 1vh; */
     padding-left: 1vw;
 }
 .ingredient {
     padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-bottom: .5vh;
     padding-left: 1vw;
      text-align: left;
 }
