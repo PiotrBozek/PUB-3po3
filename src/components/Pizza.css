@@ -103,8 +103,11 @@
     .name-pizza {
         font-size: 14px;
     }
-
-
+}
+@media (max-width: 500px) {
+    .name-pizza {
+        font-size: 10px;
+    }
 }
 
 
