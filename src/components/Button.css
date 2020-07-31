@@ -1,33 +1,16 @@
 .buttonHover {
-    width: 80px;
+    width: 100px;
     height: 40px;
     font-family: 'Montserrat', sans-serif;
     font-size: 13px;
     font-weight: 700;
-    border-radius: 15px;
+    border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    border-color: rgb(236, 236, 236);
-    /* border-color: white; */
-
-   
-    
-    background-image: linear-gradient(to top, #e4f1f8 0%, #fff 60%, #FDFDFD 100%);
-    box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 3px 0 #CECFD1;
-color: #606060;
-    
-
+    border-color: rgb(240, 240, 240);
+    margin-right: .5vw;
     transition: all .2s ease;
     text-shadow: 0 1px #fff;
-
-
-    /* background: #f3f0f1;
-    margin-bottom: 25px;
-    transition: all 0.1s ease-in-out;
-    box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.8),
-        3px 3px 5px rgba(0, 0, 0, 0.2);
-      color: #6f6cde; */
-
 
 }
 .buttonHover:hover {
@@ -42,28 +25,19 @@ color: #606060;
     align-items: baseline;
     align-self: flex-end;
     margin-bottom: .5em;
+    margin-top: .5em;
 }
 .active {
-    width: 80px;
+    width: 100px;
     height: 40px;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 700;
-    border-radius: 15px;
+    border-radius: 5px;
     text-align: center;
     border-color: rgb(236, 236, 236);
-
-
-    background-image: linear-gradient(to top, #79bbf1 0%, #fff 80%, #FDFDFD 100%);
-    box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.8);
-    transition: all .2s ease;
-    text-shadow: 0 1px #fff;
-
-
     margin-right: .5vw;
-    /* background-color: white;
-    border: 1px rgb(188, 212, 248) solid;
-    background-color: #D6EBFF; */
+    background-color: rgb(176, 234, 245);
 
 }
 @media (max-width: 990px) {
@@ -83,11 +57,16 @@ color: #606060;
         justify-content: center;
         margin: 1vw auto;
         width: 100%;
-
+        
     }
     .buttonHover {
-        width: 10vw;
-        height: 6vh;
-        font-size: 1rem;
+        width: 40%;
+        height: 5vh;
+        font-size: 14px;
+    }
+    .active {
+        width: 40%;
+        height: 5vh;
+        font-size: 14px;
     }
     }
