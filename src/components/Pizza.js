@@ -2,16 +2,11 @@ import "./Pizza.css";
 import React from 'react';
 
 export default (key) => {
-console.log(key);
-
     const skladniki = key.ingredient.toString().replace(/,/g, ", ");
     const picture = `../pics/pizzas/${key.name}.jpg`;
     const alt = `pizza ${key.name}`;
-    // const price = key.price.join(", ");
-    // const test = key.price.map(() => <p>{key.price} zł</p>)
-const price = key.price.map((one) => <p key={key}>{one}<span>zł</span></p>);
+    const price = key.price.map((one) => <p key={one}>{one}<span>zł</span></p>);
 return (
-    
 <div className="cards">
     <div className="card">
         <div>
