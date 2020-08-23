@@ -8,6 +8,7 @@
     text-align: center;
     cursor: pointer;
     border-color:  white;
+    background-color: white;
     margin-right: .5vw;
     transition: all .2s ease;
     text-shadow: 0 1px #fff;
@@ -37,7 +38,7 @@
     text-align: center;
     border-color: rgb(236, 236, 236);
     margin-right: .5vw;
-    background-color: rgb(176, 234, 245);
+    background-color: #e8f8ff;
 
 }
 @media (max-width: 990px) {

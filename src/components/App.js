@@ -21,6 +21,7 @@ class App extends React.Component {
         ingredients: [],
         choice: "pizza",
         vegetarian: false,
+        wybor: ''
     }
 
     componentDidMount(){
@@ -32,21 +33,35 @@ class App extends React.Component {
         })    
     }
 
-    onTermSubmit = (term, choise) => {
+    onTermSubmit = (term, choice) => {
+        // console.log(term);
+        this.setState({
+            wybor: term,
+        })
+        // console.log(this.state.wybor);
         const filterP = this.state.pizzas;
         const FilterPizza = filterP.filter(name => name.ingredient.includes(term.toLowerCase()));
-        if (FilterPizza.length === 0) {
+       
+        if (FilterPizza.length === 0 && choice === "pizza") {
             if (this.state.vegetarian === true) {this.setState({pizzas: FilterPizza})}
             else    this.setState({pizzas: API_DATA.Pizzas})
     } 
-        else {
+        else if (FilterPizza.length === 0 && choice === "salad") {
             this.setState({pizzas: FilterPizza})
     }
+    else {
+        this.setState({
+            pizzas: FilterPizza
+        })
+    }
+    // console.log(this.state.wybor);
 }
 
     onTermButtonPizza = () => {
+        // console.log(this.state.wybor);
         const filterP = this.state.FETCHED_DATA.Pizzas;
-        const FilterPizza = this.state.vegetarian ? filterP.filter(name => name.vege) : filterP.filter(name => name)
+        const testuj =  !this.state.wybor ? filterP.filter(name => name) : filterP.filter(name => name.ingredient.includes(this.state.wybor.toLocaleLowerCase()));
+        const FilterPizza = this.state.vegetarian ? filterP.filter(name => name.vege) : testuj;
         this.setState({
             pizzas: FilterPizza,
             choice: "pizza"
@@ -55,6 +70,7 @@ class App extends React.Component {
 
     onTermButtonSalad = () => {
         const filterP = this.state.salad;
+
         const FilterPizza = this.state.vegetarian ? filterP.filter(name => name.vege) : filterP.filter(name => name);
            this.setState({
                pizzas: FilterPizza,
@@ -63,14 +79,47 @@ class App extends React.Component {
 }
 
     handleClickCheckbox = () => {
+ 
        this.setState({
         vegetarian: !this.state.vegetarian
     })
-            const filterP = this.state.choice==="pizza" ? this.state.pizzas : this.state.salad ;
+    
+//   this.state.vegetarian ? (this.state.choice === 'pizza'? console.log('vege pizza'): console.log('sałatka vege')) : (this.state.choice === 'pizza' ? console.log('pizza all'): console.log('sałatka all'));
+              
+
+
+            // console.log(this.state.choice);
+            // console.log(this.state.vegetarian);
+
+            const filterP = this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad;
+            // console.log(filterP);
             const FilterPizza = filterP.filter(name => name.vege);
-        this.state.vegetarian !== true ? this.setState({pizzas: FilterPizza}) : this.setState(this.state.choice === "pizza" ? {pizzas: API_DATA.Pizzas}: {pizzas: API_DATA.Salad});  
-}
+            
+            console.log(FilterPizza);
+
+            const FilterPPP = this.state.wybor ? 
+                        API_DATA.Pizzas.filter(name => name.ingredient.includes(this.state.wybor.toLocaleLowerCase())) 
+                        : API_DATA.Pizzas;
+
+            const FilterSal = this.state.wybor ? 
+                        API_DATA.Salad.filter(name => name.ingredient.includes(this.state.wybor.toLocaleLowerCase())) 
+                        : API_DATA.Salad;
+                        
+            // console.log(FilterPPP);
+            console.log(FilterSal);
+            
+            
+            this.state.vegetarian ? 
+                this.setState(this.state.choice === "pizza" ? {pizzas: FilterPPP} : {pizzas: FilterSal })
+                :(this.setState(this.state.choice === "pizza" ? {pizzas: FilterPizza} : {pizzas: FilterPizza})); 
+            
+            
+                
+            // console.log(this.state.pizzas);
+           
+        }
     render () {  
+        console.log(this.state.vegetarian);
            return (
         <div 
             className="ui container">
