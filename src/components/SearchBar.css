@@ -1,17 +1,19 @@
 .search-bar {
-    /* width: 40%; */
     margin: 1vh auto;
     display: flex;
     justify-content: center;
 }
+
 .field {
     display: flex;
     align-items: flex-end;
 }
+
 .box-search {
     display: flex;
     flex-wrap: wrap;
 }
+
 .label-name p{
     display: flex;
     justify-content: flex-end;
@@ -20,14 +22,17 @@
     color: #558ff4;
     font-family: 'Lato', sans-serif;
    }
+
 input {
     margin-top: 0;
 }
+
 .input-search {
     height: 30px;
     align-items: baseline;
     margin-bottom: .5em;
 }
+
 .resetX {
     cursor: pointer;
     display: flex;
@@ -38,12 +43,12 @@ input {
 }
 
 @media (max-width: 1191px) {
-.label-name p {
-    font-size: .8em;
-}
- .resetX {
-     font-size: .8em;
- }
+    .label-name p {
+        font-size: .8em;
+    }
+    .resetX {
+        font-size: .8em;
+    }
 }
 
 @media (max-width: 990px) {

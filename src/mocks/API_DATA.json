@@ -72,7 +72,7 @@
       {
         "key": 11,
         "name": "napoli",
-        "ingredient": ["sos", "ser", "szynka", "pieczarki", "salami", "oregano" ],
+        "ingredient": ["sos", "ser", "szynka", "pieczarki", "salami" ],
         "price": [20 , 23, 30],
         "vege": false
       },
@@ -177,14 +177,14 @@
       {
         "key": 26,
         "name": "werona",
-        "ingredient": ["sos", "ser", "bekon", "jajko", "parmezan", "zielony pieprz" ],
+        "ingredient": ["sos", "ser", "boczek", "jajko", "parmezan", "zielony pieprz" ],
         "price": [20 , 27, 38],
         "vege": false
       },
       {
         "key": 27,
         "name": "lacio",
-        "ingredient": ["sos", "ser", "kurczak", "kukurydza", "słodka peperoni" ],
+        "ingredient": ["sos", "ser", "kurczak", "kukurydza", "papryka" ],
         "price": [20 , 27, 38],
         "vege": false
       },

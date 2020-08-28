@@ -12,5 +12,4 @@ import React from 'react';
             </button>
         </div>
         )
-        
 }

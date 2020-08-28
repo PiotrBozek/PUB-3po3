@@ -9,19 +9,18 @@ import Banner from './Banner';
 import DivLeft from './DivLeft';
 import DivRight from './DivRight';
 class App extends React.Component {
-
     state = {
         FETCHED_DATA: {
             Pizzas: [],
             Ingredients: [],
             Salad: []
-},
+                },
         pizzas:[],
         salad: [],
         ingredients: [],
         choice: "pizza",
         vegetarian: false,
-        wybor: ''
+        addSelection: ''
     }
 
     componentDidMount(){
@@ -34,102 +33,74 @@ class App extends React.Component {
     }
 
     onTermSubmit = (term, choice) => {
-        // console.log(term);
         this.setState({
-            wybor: term,
+            addSelection: term,
         })
-        // console.log(this.state.wybor);
-        const filterP = this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad; 
-        const FilterPizza = filterP.filter(name => name.ingredient.includes(term.toLowerCase()));
+        const filterFirst = this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad; 
+        const FilterMenu = filterFirst.filter(name => name.ingredient.includes(term.toLowerCase()));
        
-        if (FilterPizza.length === 0 && choice === "pizza") {
-            if (this.state.vegetarian === true) {this.setState({pizzas: FilterPizza})}
+        if (FilterMenu.length === 0 && choice === "pizza") {
+            if (this.state.vegetarian === true) {this.setState({pizzas: FilterMenu})}
             else    this.setState({pizzas: API_DATA.Pizzas})
     } 
-        else if (FilterPizza.length === 0 && choice === "salad") {
-            this.setState({pizzas: FilterPizza})
+        else if (FilterMenu.length === 0 && choice === "salad") {
+            this.setState({pizzas: FilterMenu})
     }
     else {
         this.setState({
-            pizzas: FilterPizza
+            pizzas: FilterMenu
         })
     }
-    // console.log(this.state.wybor);
 }
 
     onTermButtonPizza = () => {
-        
-        const filterP = API_DATA.Pizzas;
-        
-        const testuj =  this.state.wybor ? filterP.filter(name => name.ingredient.includes(this.state.wybor.toLocaleLowerCase())) : filterP.filter(name => name);
-        const FilterPizza = this.state.vegetarian ? filterP.filter(name => name.vege) : testuj;
+        const filterFirst = API_DATA.Pizzas;
+        const testuj =  this.state.addSelection ? filterFirst.filter(name => name.ingredient.includes(this.state.addSelection.toLocaleLowerCase())) : filterFirst.filter(name => name);
+        const FilterMenu = this.state.vegetarian ? testuj.filter(name => name.vege) : testuj;
         this.setState({
-            pizzas: FilterPizza,
+            pizzas: FilterMenu,
             choice: "pizza"
         })  
 }
 
     onTermButtonSalad = () => {
-       const filterP = API_DATA.Salad;
-         // console.log(this.state.wybor);
-
-const testuj =  this.state.wybor ? filterP.filter(name => name.ingredient.includes(this.state.wybor.toLocaleLowerCase())) : filterP.filter(name => name);
-        
-
-
-        const FilterPizza = this.state.vegetarian ? filterP.filter(name => name.vege) : testuj;
-           this.setState({
-               pizzas: FilterPizza,
+        const filterFirst = API_DATA.Salad;
+        const testuj =  this.state.addSelection ? filterFirst.filter(name => name.ingredient.includes(this.state.addSelection.toLocaleLowerCase())) : filterFirst.filter(name => name);
+        const FilterMenu = this.state.vegetarian ? testuj.filter(name => name.vege) : testuj;
+        this.setState({
+               pizzas: FilterMenu,
                choice: "salad"
            })   
 }
 
+    handleClickReset = (e) => {
+        e.preventDefault();
+        this.setState({
+                addSelection: '',
+                pizzas: this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad
+            })
+            }
+
     handleClickCheckbox = () => {
- 
        this.setState({
         vegetarian: !this.state.vegetarian
-    })
-    console.log(this.state.wybor);
-            
-            const FilterPPP = this.state.wybor ? 
-                        API_DATA.Pizzas.filter(name => name.ingredient.includes(this.state.wybor.toLocaleLowerCase())) 
+    })    
+            const FilterPizza = this.state.addSelection ? 
+                        API_DATA.Pizzas.filter(name => name.ingredient.includes(this.state.addSelection.toLocaleLowerCase())) 
                         : API_DATA.Pizzas;
 
-            const FilterSal = this.state.wybor ? 
-                        API_DATA.Salad.filter(name => name.ingredient.includes(this.state.wybor.toLocaleLowerCase())) 
+            const FilterSalad = this.state.addSelection ? 
+                        API_DATA.Salad.filter(name => name.ingredient.includes(this.state.addSelection.toLocaleLowerCase())) 
                         : API_DATA.Salad;
-            
-            // console.log(FilterPPP);
-            // console.log(FilterSal);
 
-            const jeszczeJedna = this.state.choice === "pizza" ? FilterPPP : FilterSal;
-            
-            console.log(this.state.choice);
-            console.log(jeszczeJedna);
-
-            const filterP = this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad;
-            const FilterPizza = this.state.wybor ? jeszczeJedna.filter(name => name.vege) : filterP.filter(name => name.vege);
-            
-
-                        console.log(FilterPPP); // wybiera z oliwkami
-
-                        console.log(filterP); // wszystkie pizze
-
-                        console.log(FilterSal); // sałatki z oliwkami
-
-                        console.log(FilterPizza); // pizza vege z oliwkami
-
-                         
-
+            const filterFirst = this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad;
+            const filterSecond = this.state.choice === "pizza" ? FilterPizza : FilterSalad;
+            const FilterMenu = this.state.addSelection ? filterSecond.filter(name => name.vege) : filterFirst.filter(name => name.vege);
             this.state.vegetarian ? 
-                this.setState(this.state.choice === "pizza" ? {pizzas: FilterPPP} : {pizzas: FilterSal}) : this.setState({pizzas: FilterPizza}); 
-            
-            
-                // console.log(FilterSal);
-
-        }
+                this.setState(this.state.choice === "pizza" ? {pizzas: FilterPizza} : {pizzas: FilterSalad}) : this.setState({pizzas: FilterMenu}); 
+            }
+    
     render () {  
-        // console.log(this.state.vegetarian);
            return (
         <div 
             className="ui container">
@@ -144,6 +115,7 @@ const testuj =  this.state.wybor ? filterP.filter(name => name.ingredient.includ
                             choice = {this.state.choice}/>
                         <SearchBar 
                             onFormSubmit = {this.onTermSubmit} />
+
                         <Checkbox 
                             vegebox={this.state.vegetarian} 
                             change={this.handleClickCheckbox}

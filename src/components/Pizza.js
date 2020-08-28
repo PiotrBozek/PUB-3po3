@@ -2,7 +2,7 @@ import "./Pizza.css";
 import React from 'react';
 
 export default (key) => {
-    const skladniki = key.ingredient.toString().replace(/,/g, ", ");
+    const items = key.ingredient.toString().replace(/,/g, ", ");
     const picture = `../pics/pizzas/${key.name}.jpg`;
     const alt = `pizza ${key.name}`;
     const price = key.price.map((one) => <p key={one}>{one}<span>zł</span></p>);
@@ -18,11 +18,10 @@ return (
                         {key.name.toUpperCase()}
                     </div>
                     <div className="ingredient">
-                        <p>{skladniki}</p>
+                        <p>{items}</p>
                     </div>
             </div>
             <div className="price">
-                    {/* <p>cena</p> */}
                     {price}
             </div>
         </div>

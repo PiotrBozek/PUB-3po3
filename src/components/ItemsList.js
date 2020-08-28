@@ -13,9 +13,9 @@ export default ({pizzas}) => {
             ))
 return (
 
- <div className ="items-list">
-     {pizzaOne}
- </div>
+    <div className ="items-list">
+        {pizzaOne}
+    </div>
 
 )
 }
