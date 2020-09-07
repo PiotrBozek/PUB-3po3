@@ -36,17 +36,18 @@ class App extends React.Component {
         })
         const filterFirst = this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad; 
         const FilterMenu = filterFirst.filter(name => name.ingredient.includes(value.toLowerCase()));
-       
+        const filterVege = this.state.vegetarian ? FilterMenu.filter(name => name.vege): FilterMenu;
         if (FilterMenu.length === 0 && choice === "pizza") {
-            if (this.state.vegetarian === true) {this.setState({pizzas: FilterMenu})}
+            if (this.state.vegetarian) {this.setState({pizzas: filterVege});
+        }
             else    this.setState({pizzas: API_DATA.Pizzas})
     } 
         else if (FilterMenu.length === 0 && choice === "salad") {
-            this.setState({pizzas: FilterMenu})
+            this.setState({pizzas: filterVege})
     }
         else {
         this.setState({
-            pizzas: FilterMenu
+            pizzas: filterVege
         })
     }
 }
@@ -75,11 +76,9 @@ class App extends React.Component {
             const FilterPizza = this.state.addSelection ? 
                         API_DATA.Pizzas.filter(name => name.ingredient.includes(this.state.addSelection.toLocaleLowerCase())) 
                         : API_DATA.Pizzas;
-
             const FilterSalad = this.state.addSelection ? 
                         API_DATA.Salad.filter(name => name.ingredient.includes(this.state.addSelection.toLocaleLowerCase())) 
                         : API_DATA.Salad;
-
             const filterFirst = this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad;
             const filterSecond = this.state.choice === "pizza" ? FilterPizza : FilterSalad;
             const FilterMenu = this.state.addSelection ? filterSecond.filter(name => name.vege) : filterFirst.filter(name => name.vege);
