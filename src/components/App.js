@@ -22,7 +22,6 @@ class App extends React.Component {
         vegetarian: false,
         addSelection: ''
     }
-
     componentDidMount(){
         this.setState({
             FETCHED_DATA: API_DATA,
@@ -31,7 +30,6 @@ class App extends React.Component {
             ingredients: API_DATA.Ingredients
         })    
     }
-
     onValueSubmit = (value, choice) => {
         this.setState({
             addSelection: value,
@@ -46,13 +44,12 @@ class App extends React.Component {
         else if (FilterMenu.length === 0 && choice === "salad") {
             this.setState({pizzas: FilterMenu})
     }
-    else {
+        else {
         this.setState({
             pizzas: FilterMenu
         })
     }
 }
-
     onValueButtonPizza = () => {
         const filterFirst = API_DATA.Pizzas;
         const testuj =  this.state.addSelection ? filterFirst.filter(name => name.ingredient.includes(this.state.addSelection.toLocaleLowerCase())) : filterFirst.filter(name => name);
@@ -62,7 +59,6 @@ class App extends React.Component {
             choice: "pizza"
         })  
 }
-
     onValueButtonSalad = () => {
         const filterFirst = API_DATA.Salad;
         const testuj =  this.state.addSelection ? filterFirst.filter(name => name.ingredient.includes(this.state.addSelection.toLocaleLowerCase())) : filterFirst.filter(name => name);
@@ -72,8 +68,6 @@ class App extends React.Component {
                choice: "salad"
            })   
         }
-
-
     handleClickCheckbox = () => {
        this.setState({
         vegetarian: !this.state.vegetarian
@@ -92,21 +86,15 @@ class App extends React.Component {
             this.state.vegetarian ? 
                 this.setState(this.state.choice === "pizza" ? {pizzas: FilterPizza} : {pizzas: FilterSalad}) : this.setState({pizzas: FilterMenu}); 
             }
-    
-    
     handleResetClick =() => {
         const FilterMenu = this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad;
+        const VegetarianFilter = this.state.vegetarian ? FilterMenu.filter(name => name.vege): FilterMenu;
         this.setState({
-            pizzas: FilterMenu,
+            pizzas: VegetarianFilter,
             addSelection: ''
         })
-
- 
-
             }
-    
     render () {  
-        console.log(this.state.addSelection);
            return (
         <div 
             className="ui container">

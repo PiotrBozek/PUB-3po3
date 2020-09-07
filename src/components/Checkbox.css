@@ -1,17 +1,16 @@
 
 .checkbox-div  {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: baseline;
-    align-self: flex-end;
-    width: 9vw;
-    font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: baseline;
+        align-self: flex-end;
+        width: 9vw;
+        font-family: 'Montserrat', sans-serif;
 }
 label {
-    margin-left: 0.3vw;
+        margin-left: 0.3vw;
 }
-
 @media (max-width: 1191px) {
     .checkbox-div     {
         width: 9vw;
@@ -25,4 +24,4 @@ label {
         width: 100%;
         margin-top: 1vw;
     }
-    }
+}

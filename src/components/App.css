@@ -3,7 +3,6 @@
         background-color: rgb(255, 255, 255);
         position: relative;
 }
-
 .search {
         display: flex;
         justify-content: center;
@@ -12,9 +11,7 @@
         margin: 5px auto;
         border-top: gray solid 1px;
         border-bottom: gray solid 1px;
-
-} 
-
+}
 .navi {
         display: flex;
         flex-direction: row;
@@ -30,15 +27,13 @@ footer {
         text-align: center;
         padding-top: 3px;
 }
-
 @media (max-width: 990px) {
-.search {
-        width: 80%;
-}
+        .search {
+                width: 80%;
+        }
 }
 @media (max-width: 875px) {
         .search {
-               flex-direction: column; 
-
+                flex-direction: column; 
         }
-        }
+}

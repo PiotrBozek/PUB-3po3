@@ -1,11 +1,11 @@
 .div-right p{
-    font-family: 'Lato', sans-serif;
-    text-align: center;
-    font-weight: 700;
-    margin-top: 10px;
-    color: gray;
-    letter-spacing: 2px;
-    font-size: 2em;
+        font-family: 'Lato', sans-serif;
+        text-align: center;
+        font-weight: 700;
+        margin-top: 10px;
+        color: gray;
+        letter-spacing: 2px;
+        font-size: 2em;
 }
 @media (max-width: 985px) {
     .div-right p {

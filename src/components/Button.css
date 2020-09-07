@@ -1,45 +1,41 @@
 .buttonHover {
-    width: 100px;
-    height: 40px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    border-color:  white;
-    background-color: white;
-    margin-right: .5vw;
-    transition: all .2s ease;
-    text-shadow: 0 1px #fff;
-
+        width: 100px;
+        height: 40px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        border-radius: 5px;
+        text-align: center;
+        cursor: pointer;
+        border-color:  white;
+        background-color: white;
+        margin-right: .5vw;
+        transition: all .2s ease;
+        text-shadow: 0 1px #fff;
 }
 .buttonHover:hover {
-    transform: scale(1.05);
-
+        transform: scale(1.05);
 }
-
 .buttons2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: baseline;
-    align-self: flex-end;
-    margin-bottom: .5em;
-    margin-top: .5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: baseline;
+        align-self: flex-end;
+        margin-bottom: .5em;
+        margin-top: .5em;
 }
 .active {
-    width: 100px;
-    height: 40px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    border-radius: 5px;
-    text-align: center;
-    border-color: rgb(236, 236, 236);
-    margin-right: .5vw;
-    background-color: #e8f8ff;
-
+        width: 100px;
+        height: 40px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 5px;
+        text-align: center;
+        border-color: rgb(236, 236, 236);
+        margin-right: .5vw;
+        background-color: #e8f8ff;
 }
 @media (max-width: 990px) {
     .buttonHover {
@@ -58,7 +54,6 @@
         justify-content: center;
         margin: 1vw auto;
         width: 100%;
-        
     }
     .buttonHover {
         width: 40%;

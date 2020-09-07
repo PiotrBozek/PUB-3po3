@@ -1,45 +1,39 @@
 .search-bar {
-    margin: 1vh auto;
-    display: flex;
-    justify-content: center;
+        margin: 1vh auto;
+        display: flex;
+        justify-content: center;
 }
-
 .field {
-    display: flex;
-    align-items: flex-end;
+        display: flex;
+        align-items: flex-end;
 }
-
 .box-search {
-    display: flex;
-    flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
 }
-
 .label-name p{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: .5vw;
-    width: 80px;
-    color: #558ff4;
-    font-family: 'Lato', sans-serif;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: .5vw;
+        width: 80px;
+        color: #558ff4;
+        font-family: 'Lato', sans-serif;
    }
-
 input {
-    margin-top: 0;
+        margin-top: 0;
 }
-
 .input-search {
-    height: 30px;
-    align-items: baseline;
-    margin-bottom: .5em;
+        height: 30px;
+        align-items: baseline;
+        margin-bottom: .5em;
 }
-
 .resetX {
-    cursor: pointer;
-    display: flex;
-    align-items: flex-end;
-    margin-left: .5vw;
-    color: #558ff4;
-    font-family: 'Lato', sans-serif;
+        cursor: pointer;
+        display: flex;
+        align-items: flex-end;
+        margin-left: .5vw;
+        color: #558ff4;
+        font-family: 'Lato', sans-serif;
 }
 
 @media (max-width: 1191px) {
@@ -50,7 +44,6 @@ input {
         font-size: .8em;
     }
 }
-
 @media (max-width: 990px) {
     .label-name p {
         font-size: .8em ;

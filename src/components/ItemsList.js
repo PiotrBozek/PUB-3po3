@@ -9,10 +9,9 @@ export default ({pizzas}) => {
                 name = {pizza.name}
                 ingredient = {pizza.ingredient}
                 price = {pizza.price}
-        />    
+        />
             ))
 return (
-
     <div className ="items-list">
         {pizzaOne}
     </div>
