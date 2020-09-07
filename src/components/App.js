@@ -32,12 +32,12 @@ class App extends React.Component {
         })    
     }
 
-    onTermSubmit = (term, choice) => {
+    onValueSubmit = (value, choice) => {
         this.setState({
-            addSelection: term,
+            addSelection: value,
         })
         const filterFirst = this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad; 
-        const FilterMenu = filterFirst.filter(name => name.ingredient.includes(term.toLowerCase()));
+        const FilterMenu = filterFirst.filter(name => name.ingredient.includes(value.toLowerCase()));
        
         if (FilterMenu.length === 0 && choice === "pizza") {
             if (this.state.vegetarian === true) {this.setState({pizzas: FilterMenu})}
@@ -53,7 +53,7 @@ class App extends React.Component {
     }
 }
 
-    onTermButtonPizza = () => {
+    onValueButtonPizza = () => {
         const filterFirst = API_DATA.Pizzas;
         const testuj =  this.state.addSelection ? filterFirst.filter(name => name.ingredient.includes(this.state.addSelection.toLocaleLowerCase())) : filterFirst.filter(name => name);
         const FilterMenu = this.state.vegetarian ? testuj.filter(name => name.vege) : testuj;
@@ -63,7 +63,7 @@ class App extends React.Component {
         })  
 }
 
-    onTermButtonSalad = () => {
+    onValueButtonSalad = () => {
         const filterFirst = API_DATA.Salad;
         const testuj =  this.state.addSelection ? filterFirst.filter(name => name.ingredient.includes(this.state.addSelection.toLocaleLowerCase())) : filterFirst.filter(name => name);
         const FilterMenu = this.state.vegetarian ? testuj.filter(name => name.vege) : testuj;
@@ -71,15 +71,8 @@ class App extends React.Component {
                pizzas: FilterMenu,
                choice: "salad"
            })   
-}
+        }
 
-    handleClickReset = (e) => {
-        e.preventDefault();
-        this.setState({
-                addSelection: '',
-                pizzas: this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad
-            })
-            }
 
     handleClickCheckbox = () => {
        this.setState({
@@ -100,7 +93,20 @@ class App extends React.Component {
                 this.setState(this.state.choice === "pizza" ? {pizzas: FilterPizza} : {pizzas: FilterSalad}) : this.setState({pizzas: FilterMenu}); 
             }
     
+    
+    handleResetClick =() => {
+        const FilterMenu = this.state.choice==="pizza" ? API_DATA.Pizzas : API_DATA.Salad;
+        this.setState({
+            pizzas: FilterMenu,
+            addSelection: ''
+        })
+
+ 
+
+            }
+    
     render () {  
+        console.log(this.state.addSelection);
            return (
         <div 
             className="ui container">
@@ -110,11 +116,13 @@ class App extends React.Component {
                 <div className="search">
                         <Buttons 
                             className="search1"
-                            onFormSubmitPizza = {this.onTermButtonPizza} 
-                            onFormSubmitSalad = {this.onTermButtonSalad}
+                            onFormSubmitPizza = {this.onValueButtonPizza} 
+                            onFormSubmitSalad = {this.onValueButtonSalad}
                             choice = {this.state.choice}/>
                         <SearchBar 
-                            onFormSubmit = {this.onTermSubmit} />
+                            onFormSubmit = {this.onValueSubmit}
+                            onResetClick = {this.handleResetClick}
+                            />
 
                         <Checkbox 
                             vegebox={this.state.vegetarian} 

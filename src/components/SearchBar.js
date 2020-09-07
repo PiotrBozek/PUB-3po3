@@ -3,21 +3,32 @@ import React from 'react';
 
 class SearchBar extends React.Component {
     state = {
-        term: ''
+        value: ''
     };
+
+
 
     onInputChange = event => {
         this.setState({
-            term: event.target.value
+            value: event.target.value
 })
     }
 
     onFormSubmit = event => {
-        event.preventDefault();
-        this.props.onFormSubmit(this.state.term); 
+        event.preventDefault(); 
+        this.props.onFormSubmit(this.state.value); 
   }
 
-    render() {
+  onResetClick = event => {
+    this.setState({
+        value: ''
+    }) 
+    this.props.onResetClick(this.state.value); 
+  }
+
+  
+
+    render(){
         return (
         <div className="search-bar">
             <form onSubmit={this.onFormSubmit} className="ui form box-search">
@@ -25,12 +36,13 @@ class SearchBar extends React.Component {
                     <label className="label-name"><p>co lubisz?</p></label>
                     <input className="input-search"
                         type="text" 
-                        value={this.state.term}
+                        value={this.state.value}
                         onChange={this.onInputChange}
                         placeholder="pieczarki, szynka itp."
                     />
                 </div>
             </form>
+            <button onClick={this.onResetClick}>kasuj</button>
         </div>
             )
     }
