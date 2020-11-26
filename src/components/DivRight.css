@@ -7,11 +7,18 @@
         letter-spacing: 2px;
         font-size: 2em;
 }
+.open {
+    border: red 1px solid;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
 @media (max-width: 985px) {
     .div-right p {
         letter-spacing: 1px;
         font-size: 1.5em;
     }
+    .open {}
 }
 @media (max-width: 670px) {
     .div-right p {
